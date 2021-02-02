@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/dance-dance-banana-frenzy/n-ex-ts/issues"
   },
-  "homepage": "https://github.com/dance-dance-banana-frenzy/n-ex-ts#readme"
+  "homepage": "https://github.com/dance-dance-banana-frenzy/n-ex-ts#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
