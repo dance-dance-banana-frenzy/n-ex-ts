@@ -19,5 +19,8 @@
   "homepage": "https://github.com/dance-dance-banana-frenzy/n-ex-ts#readme",
   "dependencies": {
     "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "typescript": "^4.1.3"
   }
 }
