@@ -1,0 +1,19 @@
+{
+  "name": "n-ex-ts",
+  "version": "1.0.0",
+  "description": "n-ex-ts",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dance-dance-banana-frenzy/n-ex-ts.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dance-dance-banana-frenzy/n-ex-ts/issues"
+  },
+  "homepage": "https://github.com/dance-dance-banana-frenzy/n-ex-ts#readme"
+}
