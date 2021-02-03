@@ -1,4 +1,6 @@
 import express from "express";
+import path from "path";
+
 const app = express();
 const PORT = 8001;
 
@@ -16,7 +18,7 @@ const docs: { [key: number]: Document } = {
 
 app.get("/", (req, res) => {
   console.log("got request");
-  res.send('<html><body><img src="icon.png"> Root Folder</body></html>');
+  res.send('<html><body><img src="static/icon.png"> Root Folder</body></html>');
 });
 
 app.all("/doc/:id/:op?", (req, res, next) => {
@@ -29,7 +31,7 @@ app.all("/doc/:id/:op?", (req, res, next) => {
   }
 });
 
-app.use(express.static("assets"));
+app.use("/static", express.static(path.join(__dirname, "static")));
 
 app.get("/doc/:id/edit", (req, res) => {
   console.log("edit doc: %s", doc.name);
