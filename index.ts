@@ -16,7 +16,7 @@ const docs: { [key: number]: Document } = {
 
 app.get("/", (req, res) => {
   console.log("got request");
-  res.send("Root Folder");
+  res.send('<html><body><img src="icon.png"> Root Folder</body></html>');
 });
 
 app.all("/doc/:id/:op?", (req, res, next) => {
@@ -28,6 +28,8 @@ app.all("/doc/:id/:op?", (req, res, next) => {
     next(new Error(`Cannot find doc ${id}`));
   }
 });
+
+app.use(express.static("assets"));
 
 app.get("/doc/:id/edit", (req, res) => {
   console.log("edit doc: %s", doc.name);
