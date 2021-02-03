@@ -1,4 +1,5 @@
 import express from "express";
+import proxy from "express-http-proxy";
 import path from "path";
 
 const app = express();
@@ -32,6 +33,7 @@ app.all("/doc/:id/:op?", (req, res, next) => {
 });
 
 app.use("/static", express.static(path.join(__dirname, "static")));
+app.use("/api", proxy("www.google.com"));
 
 app.get("/doc/:id/edit", (req, res) => {
   console.log("edit doc: %s", doc.name);
