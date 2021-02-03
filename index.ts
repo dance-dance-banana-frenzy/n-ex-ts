@@ -13,13 +13,15 @@ const docs: { [key: number]: Document } = {
     name: "Twenty Three"
   }
 };
+
 app.get("/", (req, res) => {
   console.log("got request");
   res.send("Root Folder");
 });
-app.all("/doc/:id/:op?", function(req, res, next) {
+
+app.all("/doc/:id/:op?", (req, res, next) => {
   const id = parseInt(req.params.id);
-  doc = docs[id];
+  const doc = docs[id];
   if (doc) {
     next();
   } else {
